@@ -76,8 +76,7 @@ func transform():
 	# set the position of the new nodes set it as the current node but legs few pixels up and torso 20 pixels abe legs
 	legs.position = position
 	torso.position = position + Vector2(0, -20)
-	print(self.velocity)
-	torso.velocity.x = self.velocity.x
-	torso.velocity.x = self.velocity.y
+	torso.velocity.x = (self.velocity.x) * 1.3
+	torso.velocity.y = (self.velocity.y) * 1.3
 	torso.add_collision_exception_with(legs)
 	legs.add_collision_exception_with(torso)

@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://dye3ci15eml5d"]
+
+[ext_resource type="Script" path="res://Meat.gd" id="1_pp4kf"]
+[ext_resource type="Texture2D" uid="uid://bwkb1ednj7v1c" path="res://Assets/Sprites/Obstacles/zombie_spritesheet1.png" id="2_7iigs"]
+[ext_resource type="Texture2D" uid="uid://dymu11he4rdso" path="res://Assets/Sprites/Obstacles/zombie_spritesheet2.png" id="3_ef2jm"]
+[ext_resource type="Texture2D" uid="uid://w25o3ml1pany" path="res://Assets/Sprites/Obstacles/zombie_spritesheet3.png" id="4_koweg"]
+[ext_resource type="Texture2D" uid="uid://b625ln272jbp3" path="res://Assets/Sprites/Obstacles/zombie_spritesheet4.png" id="5_0l2wi"]
+[ext_resource type="Texture2D" uid="uid://dslt450t6to40" path="res://Assets/Sprites/Obstacles/zombie_spritesheet5.png" id="6_2r0eq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_27m8m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7iigs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ef2jm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_koweg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0l2wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2r0eq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_438h6"]
+radius = 5.0
+height = 16.0
+
+[node name="Meat" type="Node2D"]
+script = ExtResource("1_pp4kf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_27m8m")
+animation = &"Idle"
+frame = 1
+frame_progress = 0.703983
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_438h6")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
