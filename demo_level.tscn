@@ -1,25 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv6jipwseptpn"]
+[gd_scene load_steps=3 format=3 uid="uid://bv6jipwseptpn"]
 
 [ext_resource type="PackedScene" uid="uid://7qg7mmydcue2" path="res://Player/zombie.tscn" id="1_7nm1a"]
 [ext_resource type="PackedScene" uid="uid://bwx3co2a2tnix" path="res://Player/demolevel.tscn" id="2_4htfp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cffid"]
-size = Vector2(546, 12.5)
-
 [node name="Demo level" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-3, 157.75)
-shape = SubResource("RectangleShape2D_cffid")
-
-[node name="Zombie" parent="." instance=ExtResource("1_7nm1a")]
-position = Vector2(30, -104)
+metadata/_edit_horizontal_guides_ = [-253.0]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -88)
-zoom = Vector2(2.125, 2.125)
+zoom = Vector2(2, 2)
+
+[node name="Zombie" parent="." instance=ExtResource("1_7nm1a")]
+position = Vector2(-168, 66)
 
 [node name="test" parent="." instance=ExtResource("2_4htfp")]
-position = Vector2(14, 119)

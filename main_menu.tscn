@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3ymgklcca6qi"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_tq53b"]
+[ext_resource type="PackedScene" uid="uid://5aa7l6n0r0xs" path="res://Logo.tscn" id="2_3g5wh"]
+[ext_resource type="AudioStream" uid="uid://bu30b6ekjhttg" path="res://Assets/Music/MenuSoundtrack.mp3" id="3_pky84"]
+[ext_resource type="Texture2D" uid="uid://ccpx0gp2ct03r" path="res://Assets/Sprites/Background/background.png" id="4_4iyy2"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_tq53b")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 501.0
+offset_top = 352.0
+offset_right = 655.0
+offset_bottom = 413.0
+text = "Start"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 501.0
+offset_top = 484.0
+offset_right = 655.0
+offset_bottom = 545.0
+text = "Quit"
+
+[node name="Logo" parent="." instance=ExtResource("2_3g5wh")]
+position = Vector2(581, 179)
+scale = Vector2(2, 2)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_pky84")
+autoplay = true
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(583, 330)
+scale = Vector2(2.57778, 4.38667)
+texture = ExtResource("4_4iyy2")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
