@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwg5ikas8am0f"
-path="res://.godot/imported/torso_idle.png-a64b71f854c20df53d366da8ef602adc.ctex"
+uid="uid://ccpx0gp2ct03r"
+path="res://.godot/imported/background.png-6aadc77e315e6635c0ffe8227bf12fd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/torso/idle/torso_idle.png"
-dest_files=["res://.godot/imported/torso_idle.png-a64b71f854c20df53d366da8ef602adc.ctex"]
+source_file="res://Assets/Sprites/Background/background.png"
+dest_files=["res://.godot/imported/background.png-6aadc77e315e6635c0ffe8227bf12fd0.ctex"]
 
 [params]
 
