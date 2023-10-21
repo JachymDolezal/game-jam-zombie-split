@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cehrrdxhwuqpu"]
 
 [ext_resource type="Texture2D" uid="uid://byll6mm412rxa" path="res://Assets/Sprites/Cave/mainlev_build.png" id="1_7px33"]
-[ext_resource type="Script" path="res://level_4.gd" id="1_vbx2b"]
+[ext_resource type="Script" path="res://Levels/level_4.gd" id="1_vbx2b"]
 [ext_resource type="PackedScene" uid="uid://7qg7mmydcue2" path="res://Player/zombie.tscn" id="2_vnavm"]
 [ext_resource type="PackedScene" uid="uid://dye3ci15eml5d" path="res://Player/meat.tscn" id="3_5kpfr"]
 [ext_resource type="Texture2D" uid="uid://ckglaonxe5r8t" path="res://Assets/Sprites/Cave/background1.png" id="4_ntvoa"]

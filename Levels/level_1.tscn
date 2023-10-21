@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bxdtjntc13nh0"]
 
-[ext_resource type="Script" path="res://level_1.gd" id="1_5yigk"]
-[ext_resource type="PackedScene" uid="uid://buxo67obl75yb" path="res://level_1_map.tscn" id="1_xxdql"]
+[ext_resource type="Script" path="res://Levels/level_1.gd" id="1_5yigk"]
+[ext_resource type="PackedScene" uid="uid://buxo67obl75yb" path="res://Levels/level_1_map.tscn" id="1_xxdql"]
 [ext_resource type="PackedScene" uid="uid://7qg7mmydcue2" path="res://Player/zombie.tscn" id="2_8u10j"]
 [ext_resource type="PackedScene" uid="uid://ba15ah2n0w3ku" path="res://gas.tscn" id="4_tt5sk"]
 [ext_resource type="PackedScene" uid="uid://dye3ci15eml5d" path="res://Player/meat.tscn" id="5_3fsj3"]

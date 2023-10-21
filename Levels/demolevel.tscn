@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bwx3co2a2tnix"]
 
-[ext_resource type="Script" path="res://Player/demolevel.gd" id="1_1x1kc"]
+[ext_resource type="Script" path="res://Levels/demolevel.gd" id="1_1x1kc"]
 [ext_resource type="Texture2D" uid="uid://ccgaac4wldwyp" path="res://Assets/Sprites/Objects/free-swamp-game-tileset-pixel-art/1 Tiles/Tile_02.png" id="1_vghn1"]
 [ext_resource type="Texture2D" uid="uid://cih2quk8d06a" path="res://Assets/Sprites/Objects/free-swamp-game-tileset-pixel-art/1 Tiles/Tile_12.png" id="2_ajqqd"]
 [ext_resource type="Texture2D" uid="uid://cn52gb7w26d0u" path="res://Assets/Sprites/Objects/free-swamp-game-tileset-pixel-art/1 Tiles/Tile_15.png" id="3_xef3l"]
@@ -104,8 +104,9 @@ offset_top = -137.0
 offset_right = -52.0
 offset_bottom = -78.0
 theme_override_font_sizes/normal_font_size = 13
-text = "W A D - movement
+text = "W A D - movement zombie/legs
 Shift - split zombie and join again
+Arrows - movement torso
 "
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
