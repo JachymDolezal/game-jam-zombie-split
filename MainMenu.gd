@@ -1,21 +1,29 @@
 extends Node2D
 
+@onready var musicplayer = $AudioStreamPlayer2D
+@onready var timer = $Timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	timer.start()
+	# hide the Play and Quit buttons
+	$Play.hide()
+	$Quit.hide()
+	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if timer.time_left == 0:
+		$Play.show()
+		$Quit.show()
+	#print(musicplayer.playing)
+	if musicplayer.playing == false:
+		musicplayer.play()
 
-
-func _on_button_pressed():
+func _on_play_pressed():
 	# start screne
-	get_tree().change_scene_to_file("res://demo_level.tscn")
+	get_tree().change_scene_to_file("res://level_selection.tscn")
 
 
-func _on_button_2_pressed():
+func _on_quit_pressed():
 	# quit game
 	get_tree().quit()
