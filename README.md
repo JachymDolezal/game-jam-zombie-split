@@ -13,13 +13,12 @@ sound effects : [link](https://www.leshylabs.com/apps/sfMaker/)
 
 Assets :
 
-- [Zombie](https://opengameart.org/content/zombie-sprites-and-sounds)
+- [Zombie] : itcho.io
     - seperated zombie and jumping animations were animated by me
-- [Forest](https://opengameart.org/content/forest-tileset)
-- [Castle](https://opengameart.org/content/castle-platformer-tileset)
-- [Cave](https://opengameart.org/content/cave-tileset-0)
-- [Traps](https://opengameart.org/content/traps-0)
-
+- [Forest] : itcho.io
+- [Castle] : itcho.io
+- [Cave] : itcho.io
+- [Traps] : itcho.io
 ## Tools
 
 - [Godot](https://godotengine.org/)
