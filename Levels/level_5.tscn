@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://ck2fmxp34ha3h"]
+[gd_scene load_steps=16 format=3 uid="uid://ck2fmxp34ha3h"]
 
+[ext_resource type="Script" path="res://Levels/level_5.gd" id="1_hnr52"]
 [ext_resource type="Texture2D" uid="uid://b13kjgjl2pk8k" path="res://Assets/Sprites/castle/PixelPlatformerSet1v.1.1/main_lev_build.png" id="1_isoc5"]
 [ext_resource type="PackedScene" uid="uid://7qg7mmydcue2" path="res://Player/zombie.tscn" id="2_okkem"]
 [ext_resource type="Texture2D" uid="uid://dooyd4tg30l7y" path="res://Assets/Sprites/castle/PixelPlatformerSet1v.1.1/Background/01 background.png" id="2_vevm5"]
@@ -4958,6 +4959,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_flim4")
 
 [node name="Level5" type="Node2D"]
+script = ExtResource("1_hnr52")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
