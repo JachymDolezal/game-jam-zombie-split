@@ -91,5 +91,4 @@ func transform():
 
 func die():
 	# go back to the main menu
-	print(get_tree())
 	get_tree().change_scene_to_file(Game.current_level)

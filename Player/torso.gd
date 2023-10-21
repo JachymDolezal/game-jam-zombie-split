@@ -21,7 +21,6 @@ func _process(delta):
 
 func _physics_process(delta):
 	# Add the gravity.
-	#print(velocity)
 	if Game.player_dies:
 		death()
 

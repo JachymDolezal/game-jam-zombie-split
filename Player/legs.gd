@@ -48,16 +48,13 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	#print(body)
 	if body.name == 'Torso':
 		can_transform_back = true
-		#print("torso in")
 
 
 func _on_area_2d_body_exited(body):
 	if body.name == 'Torso':
 		can_transform_back = false
-		#print('torso out')
 
 func transform_to_normal():
 	# get torso and remove it
