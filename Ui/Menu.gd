@@ -7,7 +7,7 @@ func _on_restart_level_pressed():
 
 
 func _on_select_level_pressed():
-	get_tree().change_scene_to_file("res://level_selection.tscn")
+	get_tree().change_scene_to_file("res://Ui/level_selection.tscn")
 
 
 func _on_quit_pressed():

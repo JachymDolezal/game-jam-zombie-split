@@ -21,7 +21,7 @@ func _process(delta):
 
 func _on_play_pressed():
 	# start screne
-	get_tree().change_scene_to_file("res://level_selection.tscn")
+	get_tree().change_scene_to_file("res://Ui/level_selection.tscn")
 
 
 func _on_quit_pressed():

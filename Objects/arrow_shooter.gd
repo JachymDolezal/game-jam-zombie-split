@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var arrow = load("res://arrow.tscn")
+@onready var arrow = load("res://Objects/arrow.tscn")
 
 var direction : Vector2 = Vector2(0,0)
 @onready var animation = $AnimatedSprite2D
@@ -25,11 +25,11 @@ func _process(delta):
 	
 func shoot():
 
-	var arrow = load("res://arrow.tscn").instantiate()
-	arrow.dir = direction
-	arrow.position = self.position + direction * Vector2(10,10)
-	arrow.rotation = 275
-	get_parent().add_child(arrow)
+	var arrow_instance = arrow.instantiate()
+	arrow_instance.dir = direction
+	arrow_instance.position = self.position + direction * Vector2(10,10)
+	arrow_instance.rotation = 275
+	get_parent().add_child(arrow_instance)
 
 
 

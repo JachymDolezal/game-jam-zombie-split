@@ -1,11 +1,11 @@
 [gd_scene load_steps=17 format=3 uid="uid://c3ymgklcca6qi"]
 
-[ext_resource type="Script" path="res://MainMenu.gd" id="1_tq53b"]
-[ext_resource type="PackedScene" uid="uid://5aa7l6n0r0xs" path="res://Logo.tscn" id="2_3g5wh"]
+[ext_resource type="Script" path="res://Ui/MainMenu.gd" id="1_tq53b"]
+[ext_resource type="PackedScene" uid="uid://5aa7l6n0r0xs" path="res://Ui/Logo.tscn" id="2_3g5wh"]
 [ext_resource type="AudioStream" uid="uid://bu30b6ekjhttg" path="res://Assets/Music/MenuSoundtrack.mp3" id="3_pky84"]
 [ext_resource type="Texture2D" uid="uid://ccpx0gp2ct03r" path="res://Assets/Sprites/Background/background.png" id="4_4iyy2"]
 [ext_resource type="Texture2D" uid="uid://chu7k786uyyvq" path="res://Assets/Sprites/Background/whitebackground.png" id="5_ul3s0"]
-[ext_resource type="PackedScene" uid="uid://cvh12scw2yqne" path="res://zombie_cutscene.tscn" id="6_kfrxy"]
+[ext_resource type="PackedScene" uid="uid://cvh12scw2yqne" path="res://Ui/zombie_cutscene.tscn" id="6_kfrxy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nidi5"]
 

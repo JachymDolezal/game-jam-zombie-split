@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bqqo5dto75q25"]
 
-[ext_resource type="Script" path="res://Label.gd" id="1_c2k7o"]
+[ext_resource type="Script" path="res://Ui/Label.gd" id="1_psc3p"]
 
 [node name="PointLabel" type="CanvasLayer"]
 
@@ -9,4 +9,4 @@ offset_left = 42.0
 offset_top = 11.0
 offset_right = 94.0
 offset_bottom = 36.0
-script = ExtResource("1_c2k7o")
+script = ExtResource("1_psc3p")

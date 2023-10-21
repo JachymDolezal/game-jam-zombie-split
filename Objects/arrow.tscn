@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://5evssot75so7"]
 
-[ext_resource type="Script" path="res://arrow.gd" id="1_07edm"]
+[ext_resource type="Script" path="res://Objects/arrow.gd" id="1_07edm"]
 [ext_resource type="Texture2D" uid="uid://dwhd1lgesyonn" path="res://Assets/Sprites/Obstacles/arrowdispensor/bullet.png" id="2_r4dgl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5sxrb"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dye3ci15eml5d"]
 
-[ext_resource type="Script" path="res://Meat.gd" id="1_pp4kf"]
+[ext_resource type="Script" path="res://Objects/Meat.gd" id="1_pp4kf"]
 [ext_resource type="Texture2D" uid="uid://bwkb1ednj7v1c" path="res://Assets/Sprites/Obstacles/zombie_spritesheet1.png" id="2_7iigs"]
 [ext_resource type="Texture2D" uid="uid://dymu11he4rdso" path="res://Assets/Sprites/Obstacles/zombie_spritesheet2.png" id="3_ef2jm"]
 [ext_resource type="Texture2D" uid="uid://w25o3ml1pany" path="res://Assets/Sprites/Obstacles/zombie_spritesheet3.png" id="4_koweg"]

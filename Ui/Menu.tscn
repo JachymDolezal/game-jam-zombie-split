@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://bbm6h37wlrvcp"]
 
-[ext_resource type="Script" path="res://Menu.gd" id="1_oxrn3"]
+[ext_resource type="Script" path="res://Ui/Menu.gd" id="1_ayvka"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_oxrn3")
+script = ExtResource("1_ayvka")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://kcc7cao7wxka"]
 
-[ext_resource type="PackedScene" uid="uid://bbm6h37wlrvcp" path="res://Menu.tscn" id="1_2bocx"]
+[ext_resource type="PackedScene" uid="uid://bbm6h37wlrvcp" path="res://Ui/Menu.tscn" id="1_2bocx"]
 [ext_resource type="Texture2D" uid="uid://chu7k786uyyvq" path="res://Assets/Sprites/Background/whitebackground.png" id="2_w0eiw"]
 
 [node name="Menu" type="Node2D"]

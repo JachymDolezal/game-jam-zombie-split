@@ -36,4 +36,4 @@ func pauseMenu():
 	# if the current scene is main menu or level select, then don't pause
 	if get_tree().get_current_scene().get_name() == "MainMenu" or get_tree().get_current_scene().get_name() == "LevelSelection":
 		return
-	get_tree().change_scene_to_file("res://PauseMenu.tscn")
+	get_tree().change_scene_to_file("res://Ui/PauseMenu.tscn")

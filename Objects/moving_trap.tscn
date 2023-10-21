@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://bkw2sim0gvi1o"]
 
-[ext_resource type="Texture2D" uid="uid://bm7dnpj5ey0bp" path="res://Assets/Sprites/Obstacles/moving_spike/spikes1.png" id="1_f6igc"]
-[ext_resource type="Script" path="res://moving_trap.gd" id="1_ou63t"]
-[ext_resource type="Texture2D" uid="uid://bssvdue0kplxf" path="res://Assets/Sprites/Obstacles/moving_spike/spikes2.png" id="2_hgoxp"]
-[ext_resource type="Texture2D" uid="uid://qh0gtxypo0ci" path="res://Assets/Sprites/Obstacles/moving_spike/spikes3.png" id="3_bgn06"]
-[ext_resource type="Texture2D" uid="uid://butsnn0esrcph" path="res://Assets/Sprites/Obstacles/moving_spike/spikes4.png" id="4_x05yr"]
+[ext_resource type="Script" path="res://Objects/moving_trap.gd" id="1_3l3yp"]
+[ext_resource type="Texture2D" uid="uid://bm7dnpj5ey0bp" path="res://Assets/Sprites/Obstacles/moving_spike/spikes1.png" id="2_tmlrd"]
+[ext_resource type="Texture2D" uid="uid://bssvdue0kplxf" path="res://Assets/Sprites/Obstacles/moving_spike/spikes2.png" id="3_kq25f"]
+[ext_resource type="Texture2D" uid="uid://qh0gtxypo0ci" path="res://Assets/Sprites/Obstacles/moving_spike/spikes3.png" id="4_3q2vc"]
+[ext_resource type="Texture2D" uid="uid://butsnn0esrcph" path="res://Assets/Sprites/Obstacles/moving_spike/spikes4.png" id="5_rh678"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o7n7l"]
 size = Vector2(29, 17)
@@ -16,16 +16,16 @@ size = Vector2(31, 19)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_f6igc")
+"texture": ExtResource("2_tmlrd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_hgoxp")
+"texture": ExtResource("3_kq25f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_bgn06")
+"texture": ExtResource("4_3q2vc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_x05yr")
+"texture": ExtResource("5_rh678")
 }],
 "loop": true,
 "name": &"Idle",
@@ -95,7 +95,7 @@ _data = {
 }
 
 [node name="MovingTrap" type="CharacterBody2D"]
-script = ExtResource("1_ou63t")
+script = ExtResource("1_3l3yp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 7.5)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drg073mg3er5t"
-path="res://.godot/imported/whitebackground.png-7e6a0c743f490c2d1481ab12f89868f6.ctex"
+uid="uid://bks0dh8i2748k"
+path="res://.godot/imported/torso_jump1.png-118b363a83c89e9b311e85f103b0ce4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://whitebackground.png"
-dest_files=["res://.godot/imported/whitebackground.png-7e6a0c743f490c2d1481ab12f89868f6.ctex"]
+source_file="res://Assets/jump/torso_jump1.png"
+dest_files=["res://.godot/imported/torso_jump1.png-118b363a83c89e9b311e85f103b0ce4e.ctex"]
 
 [params]
 

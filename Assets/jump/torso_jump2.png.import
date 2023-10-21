@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3vir8aw8nslc"
-path="res://.godot/imported/torso_jump2.png-a2901163fd7b035a069de9724dc63c79.ctex"
+path="res://.godot/imported/torso_jump2.png-49033649f0aab07164a8c9384c9f68a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://jump/torso_jump2.png"
-dest_files=["res://.godot/imported/torso_jump2.png-a2901163fd7b035a069de9724dc63c79.ctex"]
+source_file="res://Assets/jump/torso_jump2.png"
+dest_files=["res://.godot/imported/torso_jump2.png-49033649f0aab07164a8c9384c9f68a1.ctex"]
 
 [params]
 

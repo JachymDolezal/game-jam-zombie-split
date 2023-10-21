@@ -1,23 +1,23 @@
 [gd_scene load_steps=17 format=3 uid="uid://cvh12scw2yqne"]
 
-[ext_resource type="Texture2D" uid="uid://bg0fgaksym7kh" path="res://Assets/Sprites/Player/zombie/jump/zombie_jump2.png" id="2_5xgyp"]
-[ext_resource type="Texture2D" uid="uid://lv3pjpga0mb4" path="res://Assets/Sprites/Player/zombie/idle/idle/zombie_idle1.png" id="3_3xi48"]
-[ext_resource type="Texture2D" uid="uid://qayfoko6qb71" path="res://Assets/Sprites/Player/zombie/idle/idle/zombie_idle2.png" id="4_lek5n"]
-[ext_resource type="Texture2D" uid="uid://mhlf0hd06udx" path="res://Assets/Sprites/Player/zombie/jump/zombie_jump1.png" id="5_2hknd"]
-[ext_resource type="Texture2D" uid="uid://bbkfestlu21pb" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk1.png" id="6_bbtgl"]
-[ext_resource type="Texture2D" uid="uid://ds0x0kqdxcvu" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk2.png" id="7_6xgs1"]
-[ext_resource type="Texture2D" uid="uid://npv6tu0nxoyb" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk3.png" id="8_th4q7"]
-[ext_resource type="Texture2D" uid="uid://d3p4tyxo7bbax" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk4.png" id="9_juo5r"]
-[ext_resource type="Texture2D" uid="uid://dykrphmbnycdx" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk5.png" id="10_cjfl8"]
-[ext_resource type="Texture2D" uid="uid://bekp7myetxc6q" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk6.png" id="11_xgpn0"]
-[ext_resource type="Texture2D" uid="uid://r5dlyux2jvst" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk7.png" id="12_5n745"]
-[ext_resource type="Texture2D" uid="uid://4k670vskt2dt" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk8.png" id="13_o61cm"]
+[ext_resource type="Texture2D" uid="uid://bg0fgaksym7kh" path="res://Assets/Sprites/Player/zombie/jump/zombie_jump2.png" id="1_v0utw"]
+[ext_resource type="Texture2D" uid="uid://lv3pjpga0mb4" path="res://Assets/Sprites/Player/zombie/idle/idle/zombie_idle1.png" id="2_jlo7p"]
+[ext_resource type="Texture2D" uid="uid://qayfoko6qb71" path="res://Assets/Sprites/Player/zombie/idle/idle/zombie_idle2.png" id="3_7txwe"]
+[ext_resource type="Texture2D" uid="uid://mhlf0hd06udx" path="res://Assets/Sprites/Player/zombie/jump/zombie_jump1.png" id="4_o7m27"]
+[ext_resource type="Texture2D" uid="uid://bbkfestlu21pb" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk1.png" id="5_kc4u6"]
+[ext_resource type="Texture2D" uid="uid://ds0x0kqdxcvu" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk2.png" id="6_rr4xn"]
+[ext_resource type="Texture2D" uid="uid://npv6tu0nxoyb" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk3.png" id="7_4abdb"]
+[ext_resource type="Texture2D" uid="uid://d3p4tyxo7bbax" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk4.png" id="8_3o35r"]
+[ext_resource type="Texture2D" uid="uid://dykrphmbnycdx" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk5.png" id="9_ep2vr"]
+[ext_resource type="Texture2D" uid="uid://bekp7myetxc6q" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk6.png" id="10_4hjc1"]
+[ext_resource type="Texture2D" uid="uid://r5dlyux2jvst" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk7.png" id="11_r80o7"]
+[ext_resource type="Texture2D" uid="uid://4k670vskt2dt" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk8.png" id="12_0ssya"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_54hhk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_5xgyp")
+"texture": ExtResource("1_v0utw")
 }],
 "loop": true,
 "name": &"Fall",
@@ -25,10 +25,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_3xi48")
+"texture": ExtResource("2_jlo7p")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_lek5n")
+"texture": ExtResource("3_7txwe")
 }],
 "loop": true,
 "name": &"Idle",
@@ -36,10 +36,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_2hknd")
+"texture": ExtResource("4_o7m27")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_5xgyp")
+"texture": ExtResource("1_v0utw")
 }],
 "loop": true,
 "name": &"Jump",
@@ -47,28 +47,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_bbtgl")
+"texture": ExtResource("5_kc4u6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_6xgs1")
+"texture": ExtResource("6_rr4xn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_th4q7")
+"texture": ExtResource("7_4abdb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_juo5r")
+"texture": ExtResource("8_3o35r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_cjfl8")
+"texture": ExtResource("9_ep2vr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_xgpn0")
+"texture": ExtResource("10_4hjc1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_5n745")
+"texture": ExtResource("11_r80o7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_o61cm")
+"texture": ExtResource("12_0ssya")
 }],
 "loop": true,
 "name": &"Run",

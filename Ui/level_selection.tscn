@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://xa4hl5a6l100"]
 
-[ext_resource type="Script" path="res://level_selection.gd" id="1_8vsk3"]
+[ext_resource type="Script" path="res://Ui/level_selection.gd" id="1_8vsk3"]
 [ext_resource type="Texture2D" uid="uid://chu7k786uyyvq" path="res://Assets/Sprites/Background/whitebackground.png" id="2_l3qs6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jprx3"]

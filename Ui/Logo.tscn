@@ -1,7 +1,7 @@
 [gd_scene load_steps=47 format=3 uid="uid://5aa7l6n0r0xs"]
 
 [ext_resource type="Texture2D" uid="uid://dlv5pc06isih1" path="res://Assets/Sprites/Name/idle/zombie_split_idle1.png" id="1_hk1b8"]
-[ext_resource type="Script" path="res://Logo.gd" id="1_rlm25"]
+[ext_resource type="Script" path="res://Ui/Logo.gd" id="1_rlm25"]
 [ext_resource type="Texture2D" uid="uid://b4x7o8otf78oo" path="res://Assets/Sprites/Name/idle/zombie_split_idle2.png" id="2_hix2k"]
 [ext_resource type="Texture2D" uid="uid://cdpjgt0v0yw6p" path="res://Assets/Sprites/Name/idle/zombie_split_idle3.png" id="3_l2itw"]
 [ext_resource type="Texture2D" uid="uid://d2wvcj8kppshh" path="res://Assets/Sprites/Name/idle/zombie_split_idle4.png" id="4_d1w0o"]
