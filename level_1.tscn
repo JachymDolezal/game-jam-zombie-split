@@ -1,0 +1,103 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxdtjntc13nh0"]
+
+[ext_resource type="Script" path="res://level_1.gd" id="1_5yigk"]
+[ext_resource type="PackedScene" uid="uid://buxo67obl75yb" path="res://level_1_map.tscn" id="1_xxdql"]
+[ext_resource type="PackedScene" uid="uid://7qg7mmydcue2" path="res://Player/zombie.tscn" id="2_8u10j"]
+[ext_resource type="PackedScene" uid="uid://ba15ah2n0w3ku" path="res://gas.tscn" id="4_tt5sk"]
+[ext_resource type="PackedScene" uid="uid://dye3ci15eml5d" path="res://Player/meat.tscn" id="5_3fsj3"]
+[ext_resource type="PackedScene" uid="uid://beeluyiyggoxs" path="res://Player/spikes.tscn" id="7_nhjsi"]
+[ext_resource type="Texture2D" uid="uid://b40q1gl0388ve" path="res://Assets/Sprites/Objects/free-swamp-game-tileset-pixel-art/2 Background/Layers/1.png" id="8_x2hkp"]
+[ext_resource type="AudioStream" uid="uid://bds3k5h8klot2" path="res://Assets/Music/forest-soundtrack.mp3" id="9_blfu1"]
+[ext_resource type="Texture2D" uid="uid://dktar0diqh3of" path="res://Assets/Sprites/Objects/free-swamp-game-tileset-pixel-art/2 Background/Layers/3.png" id="9_la5o5"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_5yigk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Zombie" parent="." instance=ExtResource("2_8u10j")]
+position = Vector2(-121, 18)
+
+[node name="Level1Map" parent="." instance=ExtResource("1_xxdql")]
+
+[node name="Gas" parent="." instance=ExtResource("4_tt5sk")]
+position = Vector2(-168, -72)
+
+[node name="Meat" parent="." instance=ExtResource("5_3fsj3")]
+position = Vector2(-121, -36)
+
+[node name="Meat2" parent="." instance=ExtResource("5_3fsj3")]
+position = Vector2(-121, -96)
+
+[node name="Meat3" parent="." instance=ExtResource("5_3fsj3")]
+position = Vector2(266, -104)
+
+[node name="Node2D" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(-55, 112)
+
+[node name="Node2D2" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(-37, 112)
+
+[node name="Node2D3" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(-18, 112)
+
+[node name="Node2D4" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(0, 112)
+
+[node name="Node2D5" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(19, 112)
+
+[node name="Node2D6" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(39, 112)
+
+[node name="Node2D7" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(57, 112)
+
+[node name="Node2D8" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(76, 112)
+
+[node name="Node2D9" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(94, 112)
+
+[node name="Node2D10" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(113, 112)
+
+[node name="Node2D11" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(135, 112)
+
+[node name="Node2D12" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(153, 112)
+
+[node name="Node2D13" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(172, 112)
+
+[node name="Node2D14" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(190, 112)
+
+[node name="Node2D15" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(209, 112)
+
+[node name="Node2D16" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(227, 112)
+
+[node name="Node2D17" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(245, 112)
+
+[node name="Node2D18" parent="." instance=ExtResource("7_nhjsi")]
+position = Vector2(264, 112)
+
+[node name="1" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(2, -4)
+texture = ExtResource("8_x2hkp")
+
+[node name="3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.807843)
+z_index = -1
+position = Vector2(4, -1)
+texture = ExtResource("9_la5o5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_blfu1")
+volume_db = -10.0
