@@ -1,0 +1,153 @@
+[gd_scene load_steps=17 format=3 uid="uid://cvh12scw2yqne"]
+
+[ext_resource type="Texture2D" uid="uid://bg0fgaksym7kh" path="res://Assets/Sprites/Player/zombie/jump/zombie_jump2.png" id="2_5xgyp"]
+[ext_resource type="Texture2D" uid="uid://lv3pjpga0mb4" path="res://Assets/Sprites/Player/zombie/idle/idle/zombie_idle1.png" id="3_3xi48"]
+[ext_resource type="Texture2D" uid="uid://qayfoko6qb71" path="res://Assets/Sprites/Player/zombie/idle/idle/zombie_idle2.png" id="4_lek5n"]
+[ext_resource type="Texture2D" uid="uid://mhlf0hd06udx" path="res://Assets/Sprites/Player/zombie/jump/zombie_jump1.png" id="5_2hknd"]
+[ext_resource type="Texture2D" uid="uid://bbkfestlu21pb" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk1.png" id="6_bbtgl"]
+[ext_resource type="Texture2D" uid="uid://ds0x0kqdxcvu" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk2.png" id="7_6xgs1"]
+[ext_resource type="Texture2D" uid="uid://npv6tu0nxoyb" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk3.png" id="8_th4q7"]
+[ext_resource type="Texture2D" uid="uid://d3p4tyxo7bbax" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk4.png" id="9_juo5r"]
+[ext_resource type="Texture2D" uid="uid://dykrphmbnycdx" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk5.png" id="10_cjfl8"]
+[ext_resource type="Texture2D" uid="uid://bekp7myetxc6q" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk6.png" id="11_xgpn0"]
+[ext_resource type="Texture2D" uid="uid://r5dlyux2jvst" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk7.png" id="12_5n745"]
+[ext_resource type="Texture2D" uid="uid://4k670vskt2dt" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk8.png" id="13_o61cm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_54hhk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5xgyp")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3xi48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lek5n")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_2hknd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5xgyp")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_bbtgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6xgs1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_th4q7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_juo5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cjfl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xgpn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5n745")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_o61cm")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_u1jau"]
+resource_name = "Idle"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Run"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_pqv17"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Run"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_642ux"]
+_data = {
+"Idle": SubResource("Animation_u1jau"),
+"RESET": SubResource("Animation_pqv17")
+}
+
+[node name="ZombieCutscene" type="Node2D"]
+position = Vector2(22, 24)
+metadata/_edit_vertical_guides_ = [-38.0, -33.0]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_54hhk")
+animation = &"Run"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
+libraries = {
+"": SubResource("AnimationLibrary_642ux")
+}

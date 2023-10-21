@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbm6h37wlrvcp"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_oxrn3"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_oxrn3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Restart Level" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.596078, 0.682353, 0.517647, 1)
+theme_override_font_sizes/font_size = 50
+text = "Restart"
+
+[node name="Select Level" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.596078, 0.682353, 0.517647, 1)
+theme_override_font_sizes/font_size = 50
+text = "Select Level"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.596078, 0.682353, 0.517647, 1)
+theme_override_font_sizes/font_size = 50
+text = "Quit Game"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Restart Level" to="." method="_on_restart_level_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Select Level" to="." method="_on_select_level_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
