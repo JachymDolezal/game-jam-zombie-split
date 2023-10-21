@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://kcc7cao7wxka"]
+
+[ext_resource type="PackedScene" uid="uid://bbm6h37wlrvcp" path="res://Menu.tscn" id="1_2bocx"]
+[ext_resource type="Texture2D" uid="uid://chu7k786uyyvq" path="res://Assets/Sprites/Background/whitebackground.png" id="2_w0eiw"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="Menu" parent="." instance=ExtResource("1_2bocx")]
+offset_left = -158.0
+offset_top = -119.0
+offset_right = 45.0
+offset_bottom = -119.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Whitebackground" type="Sprite2D" parent="."]
+modulate = Color(0.85098, 1, 0.941176, 1)
+z_index = -1
+position = Vector2(0.00012207, 6.10352e-05)
+scale = Vector2(36.25, 20.5625)
+texture = ExtResource("2_w0eiw")
