@@ -1,6 +1,7 @@
 extends Node2D
 
-
+var dir : Vector2 = Vector2(0,0)
+var velocity = 80
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -8,10 +9,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	#print("direction",dir)
+	# move in direction of dir
+	self.position += dir * velocity * delta
+
 
 
 func _on_area_2d_body_entered(body):
-	if body.name == "Torso" or body.name == "Legs" or body.name == "Zombie":
-		# restart the scene
-		get_tree().reload_current_scene()
+	
+	if body.name == "Legs" or body.name == "Zombie" or body.name == "Torso":
+		Game.player_dies = true
+	queue_free()
