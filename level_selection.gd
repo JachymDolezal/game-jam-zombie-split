@@ -1,5 +1,5 @@
 extends Node2D
-
+@onready var pause_menu = load("res://Menu.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,7 +18,10 @@ func _on_button_pressed():
 	Game.current_level = "res://demo_level.tscn"
 	Game.required_points = 2
 	get_tree().change_scene_to_file("res://demo_level.tscn")
-	
+	# add pause menu node to the scene as child
+	var menu = pause_menu.instantiate()
+	# add pause menu node to the scene as child
+	add_child(menu)
 
 func _on_button_2_pressed():
 	Game.current_level = "res://level_1.tscn"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cehrrdxhwuqpu"]
+[gd_scene load_steps=15 format=3 uid="uid://cehrrdxhwuqpu"]
 
 [ext_resource type="Texture2D" uid="uid://byll6mm412rxa" path="res://Assets/Sprites/Cave/mainlev_build.png" id="1_7px33"]
 [ext_resource type="Script" path="res://level_4.gd" id="1_vbx2b"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bq1g4d0b2groa" path="res://Assets/Sprites/Cave/background4a.png" id="7_ndj7f"]
 [ext_resource type="PackedScene" uid="uid://beeluyiyggoxs" path="res://Player/spikes.tscn" id="8_wwvlh"]
 [ext_resource type="PackedScene" uid="uid://pe6dn00fueij" path="res://arrow_shooter.tscn" id="9_g8ohp"]
+[ext_resource type="PackedScene" uid="uid://ba15ah2n0w3ku" path="res://gas.tscn" id="11_xqc4x"]
+[ext_resource type="AudioStream" uid="uid://cldpb75wk17df" path="res://Assets/Music/cave song.mp3" id="12_rotu1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdmt5"]
 texture = ExtResource("1_7px33")
@@ -1026,7 +1028,7 @@ texture = ExtResource("1_7px33")
 6:15/0 = 0
 6:15/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:15/0/physics_layer_0/angular_velocity = 0.0
-6:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 3.5, -8, 3.5)
 8:15/0 = 0
 8:15/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:15/0/physics_layer_0/angular_velocity = 0.0
@@ -3880,3 +3882,19 @@ metadata/Cooldown = 2.5
 position = Vector2(245, -136)
 metadata/Direction = Vector2(0, 1)
 metadata/Cooldown = 2.0
+
+[node name="Gas" parent="." instance=ExtResource("11_xqc4x")]
+position = Vector2(114, 40)
+
+[node name="Gas2" parent="." instance=ExtResource("11_xqc4x")]
+position = Vector2(114, 56)
+
+[node name="Gas3" parent="." instance=ExtResource("11_xqc4x")]
+position = Vector2(114, 73)
+
+[node name="Gas4" parent="." instance=ExtResource("11_xqc4x")]
+position = Vector2(114, 88)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_rotu1")
+autoplay = true

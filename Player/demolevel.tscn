@@ -105,8 +105,7 @@ offset_right = -52.0
 offset_bottom = -78.0
 theme_override_font_sizes/normal_font_size = 13
 text = "W A D - movement
-Shift - split zombie
-S - join together while close
+Shift - split zombie and join again
 "
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
@@ -118,12 +117,12 @@ theme_override_font_sizes/normal_font_size = 8
 text = "Poinson damages  only head"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="."]
-offset_left = 147.0
+offset_left = 120.0
 offset_top = 125.0
-offset_right = 283.0
-offset_bottom = 138.0
+offset_right = 300.0
+offset_bottom = 148.0
 theme_override_font_sizes/normal_font_size = 9
-text = "Split mid air to reach higher "
+text = "Split mid air to reach higher places"
 
 [node name="RichTextLabel7" type="RichTextLabel" parent="."]
 offset_left = 127.0
@@ -148,6 +147,15 @@ offset_right = -76.0
 offset_bottom = 147.0
 theme_override_font_sizes/normal_font_size = 9
 text = "Split with Shift"
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="."]
+offset_left = -76.0
+offset_top = 129.0
+offset_right = 2.0
+offset_bottom = 160.0
+theme_override_font_sizes/normal_font_size = 9
+text = "Join with Shift
+(must be close)"
 
 [node name="RichTextLabel6" type="RichTextLabel" parent="."]
 offset_left = -188.0
