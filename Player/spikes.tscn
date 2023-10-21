@@ -1,23 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://beeluyiyggoxs"]
+[gd_scene load_steps=3 format=3 uid="uid://beeluyiyggoxs"]
 
 [ext_resource type="Script" path="res://Player/spikes.gd" id="1_3n0r2"]
-[ext_resource type="Texture2D" uid="uid://b87bllgnhhnho" path="res://Assets/Sprites/Obstacles/spikes.png" id="1_nk8ff"]
+[ext_resource type="Texture2D" uid="uid://blne8e0bqpmqo" path="res://Assets/Sprites/Obstacles/spike.png" id="2_71efc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vboao"]
-size = Vector2(32, 34)
-
-[node name="Node2D" type="Node2D"]
+[node name="Spike" type="Node2D"]
 script = ExtResource("1_3n0r2")
+metadata/_edit_vertical_guides_ = [8.0, -8.0, -100.0]
+metadata/_edit_horizontal_guides_ = [-53.0, -53.0, -16.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -11.5)
-scale = Vector2(1, 1.71875)
-texture = ExtResource("1_nk8ff")
+position = Vector2(1.19209e-06, -8)
+scale = Vector2(1, 1)
+texture = ExtResource("2_71efc")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_vboao")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(0, -8)
+polygon = PackedVector2Array(0, -7, -9, 8, 9, 8)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

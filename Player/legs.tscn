@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://7dvr67flll04"]
+[gd_scene load_steps=50 format=3 uid="uid://7dvr67flll04"]
 
 [ext_resource type="Texture2D" uid="uid://bocdb6s6331fx" path="res://Assets/Sprites/Player/legs/walk/zombie_legs1.png" id="1_hxmex"]
 [ext_resource type="Script" path="res://Player/legs.gd" id="1_idkcu"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://l7w3ouplhop4" path="res://Assets/Sprites/Player/legs/walk/zombie_legs6.png" id="8_5mnrs"]
 [ext_resource type="Texture2D" uid="uid://chewfc5hx5mcp" path="res://Assets/Sprites/Player/legs/walk/zombie_legs7.png" id="9_nwpsh"]
 [ext_resource type="Texture2D" uid="uid://bxwsv0a3sfbsp" path="res://Assets/Sprites/Player/legs/walk/zombie_legs8.png" id="10_1ybdu"]
+[ext_resource type="AudioStream" uid="uid://40krfkus8227" path="res://Assets/Sounds/jump.wav" id="15_l4hwy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnwfy"]
 size = Vector2(8, 19)
@@ -375,6 +376,10 @@ parameters/Run/blend_position = 0
 libraries = {
 "": SubResource("AnimationLibrary_jyt16")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_l4hwy")
+volume_db = 10.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

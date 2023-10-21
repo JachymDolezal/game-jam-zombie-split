@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://7qg7mmydcue2"]
+[gd_scene load_steps=47 format=3 uid="uid://7qg7mmydcue2"]
 
 [ext_resource type="Texture2D" uid="uid://lv3pjpga0mb4" path="res://Assets/Sprites/Player/zombie/idle/idle/zombie_idle1.png" id="1_10jxn"]
 [ext_resource type="Script" path="res://Player/zombie.gd" id="1_p7deg"]
@@ -13,9 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://bekp7myetxc6q" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk6.png" id="11_d3gvt"]
 [ext_resource type="Texture2D" uid="uid://r5dlyux2jvst" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk7.png" id="12_l1cfy"]
 [ext_resource type="Texture2D" uid="uid://4k670vskt2dt" path="res://Assets/Sprites/Player/zombie/walk/zombiewalk8.png" id="13_jqttd"]
+[ext_resource type="AudioStream" uid="uid://40krfkus8227" path="res://Assets/Sounds/jump.wav" id="14_obw83"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hniwy"]
-size = Vector2(13, 32)
+size = Vector2(13, 31)
 
 [sub_resource type="Animation" id="Animation_rfot6"]
 resource_name = "Fall"
@@ -331,12 +332,15 @@ states/Fall/position = Vector2(669, 1)
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_rh7q0")
 states/Idle/position = Vector2(332, 201)
 states/Jump/node = SubResource("AnimationNodeBlendSpace2D_3blny")
-states/Jump/position = Vector2(354, 1)
+states/Jump/position = Vector2(320, -15)
 states/Run/node = SubResource("AnimationNodeBlendSpace2D_7brvf")
 states/Run/position = Vector2(591, 142)
 states/Start/position = Vector2(198, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_b13oe"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_6js07"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_d4hf2"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_snj71"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_s2xdt"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_1hk0q"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_jco02"), "Jump", "Fall", SubResource("AnimationNodeStateMachineTransition_3jvdb"), "Fall", "Run", SubResource("AnimationNodeStateMachineTransition_6ecj4"), "Run", "Fall", SubResource("AnimationNodeStateMachineTransition_gmaos"), "Idle", "Fall", SubResource("AnimationNodeStateMachineTransition_hne6f"), "Fall", "Idle", SubResource("AnimationNodeStateMachineTransition_il8g6")]
-graph_offset = Vector2(-266, -58)
+graph_offset = Vector2(-146, -111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddg4j"]
+size = Vector2(8.75, 9.25)
 
 [node name="Zombie" type="CharacterBody2D"]
 position = Vector2(22, 24)
@@ -344,7 +348,7 @@ script = ExtResource("1_p7deg")
 metadata/_edit_vertical_guides_ = [-38.0, -33.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 0)
+position = Vector2(1.5, 0.5)
 shape = SubResource("RectangleShape2D_hniwy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -366,3 +370,14 @@ parameters/conditions/press_run = false
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Jump/blend_position = Vector2(0, 0)
 parameters/Run/blend_position = Vector2(0, 0)
+
+[node name="Head" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head"]
+position = Vector2(1, -11)
+shape = SubResource("RectangleShape2D_ddg4j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_obw83")
+volume_db = 10.0
+pitch_scale = 0.71

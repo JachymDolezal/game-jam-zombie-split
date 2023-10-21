@@ -8,6 +8,7 @@ var can_transform_back = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animation_tree = $AnimationTree
+@onready var sounds = $AudioStreamPlayer2D
 
 func _ready():
 	animation_tree.active = true
@@ -16,15 +17,19 @@ func _process(delta):
 	update_animation_parametrs()
 
 func _physics_process(delta):
+
+	if Game.player_dies:
+		death()
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("Up") and is_on_floor():
+		sounds.play()
 		velocity.y = JUMP_VELOCITY
 
-	if (Input.is_action_pressed("Down")) and can_transform_back:
+	if (Input.is_action_pressed("Transform")) and can_transform_back:
 		transform_to_normal()
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -86,3 +91,8 @@ func update_animation_parametrs():
 		animation_tree["parameters/conditions/Press Run"] = true
 	else:
 		animation_tree["parameters/conditions/Press Run"] = false
+
+func death():
+	# reload scene
+	Game.player_dies = false
+	get_tree().reload_current_scene()

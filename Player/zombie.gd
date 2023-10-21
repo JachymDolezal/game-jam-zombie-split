@@ -7,6 +7,7 @@ const JUMP_VELOCITY = Game.Zombie_jump_speed
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animation_tree = $AnimationTree
+@onready var sounds = $AudioStreamPlayer2D
 
 func _ready():
 	animation_tree.active = true
@@ -15,12 +16,19 @@ func _process(delta):
 	update_animation_parametrs()
 
 func _physics_process(delta):
+
+	if Game.player_dies:
+		Game.player_dies = false
+		die()
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
+
 	# Handle Jump.
 	if Input.is_action_just_pressed("Up") and is_on_floor():
+		sounds.play()
 		velocity.y = JUMP_VELOCITY
 
 	if Input.is_action_just_pressed("Transform"):
@@ -80,3 +88,8 @@ func transform():
 	torso.velocity.y = (self.velocity.y) * 1.3
 	torso.add_collision_exception_with(legs)
 	legs.add_collision_exception_with(torso)
+
+func die():
+	# go back to the main menu
+	print(get_tree())
+	get_tree().change_scene_to_file(Game.current_level)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://2lqft8huoxtd"]
+[gd_scene load_steps=46 format=3 uid="uid://2lqft8huoxtd"]
 
 [ext_resource type="Script" path="res://Player/torso.gd" id="1_hmuai"]
 [ext_resource type="Texture2D" uid="uid://byeggyxjlnqw7" path="res://Assets/Sprites/Player/torso/jump/torso_jump1.png" id="2_hxt68"]
@@ -11,9 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://dvypt6ow4wa40" path="res://Assets/Sprites/Player/torso/run/torso_walk4.png" id="9_45kxu"]
 [ext_resource type="Texture2D" uid="uid://drs5idluerxsh" path="res://Assets/Sprites/Player/torso/run/torso_walk5.png" id="10_ycwr7"]
 [ext_resource type="Texture2D" uid="uid://cbwxni5tu6ckp" path="res://Assets/Sprites/Player/torso/run/torso_walk6.png" id="11_7tevg"]
+[ext_resource type="AudioStream" uid="uid://40krfkus8227" path="res://Assets/Sounds/jump.wav" id="12_r14re"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vkhc1"]
-size = Vector2(15, 14)
+size = Vector2(13, 14)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rxa2g"]
 animations = [{
@@ -360,3 +361,8 @@ parameters/Run/blend_position = 0
 libraries = {
 "": SubResource("AnimationLibrary_xqalw")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_r14re")
+volume_db = 10.0
+pitch_scale = 1.49

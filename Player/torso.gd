@@ -5,6 +5,7 @@ const SPEED = Game.Torso_speed
 const JUMP_VELOCITY = Game.Torso_jump_speed
 @onready var timer = $Timer
 @onready var animation_tree = $AnimationTree
+@onready var sounds = $AudioStreamPlayer2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -21,13 +22,16 @@ func _process(delta):
 func _physics_process(delta):
 	# Add the gravity.
 	#print(velocity)
-	
+	if Game.player_dies:
+		death()
+
 	#if(timer.is_stopped()):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("U_arrow") and is_on_floor():
+		sounds.play()
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -67,3 +71,8 @@ func update_animation_parametrs():
 	else:
 		animation_tree["parameters/conditions/press_run"] = false
 		
+
+func death():
+	# reload the scene
+	Game.player_dies = false
+	get_tree().reload_current_scene()
