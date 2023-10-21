@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cldpb75wk17df"
+path="res://.godot/imported/cave song.mp3-212dc59ceb36f482efb8ec787e239e4e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/cave song.mp3"
+dest_files=["res://.godot/imported/cave song.mp3-212dc59ceb36f482efb8ec787e239e4e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
