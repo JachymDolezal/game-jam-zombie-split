@@ -6,6 +6,8 @@ const JUMP_VELOCITY = Game.Torso_jump_speed
 @onready var timer = $Timer
 @onready var animation_tree = $AnimationTree
 @onready var sounds = $AudioStreamPlayer2D
+var push_force = 80
+var force = 60
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -50,6 +52,14 @@ func _physics_process(delta):
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
 	
+	var bodies = get_slide_collision_count()
+	for i in range(bodies):
+		var collision = get_slide_collision(i)
+		if collision.get_collider() is RigidBody2D:
+			if collision.get_collider().min_force:
+				if force >= int(collision.get_collider().min_force):
+					collision.get_collider().apply_impulse(-collision.get_normal() * push_force)
+	
 func update_animation_parametrs():
 	if(velocity == Vector2.ZERO):
 		animation_tree["parameters/conditions/idle"] = true
@@ -73,5 +83,6 @@ func update_animation_parametrs():
 
 func death():
 	# reload the scene
+	print("torsi dies")
 	Game.player_dies = false
 	get_tree().reload_current_scene()

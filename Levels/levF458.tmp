@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b40q1gl0388ve" path="res://Assets/Sprites/Objects/free-swamp-game-tileset-pixel-art/2 Background/Layers/1.png" id="8_x2hkp"]
 [ext_resource type="AudioStream" uid="uid://bds3k5h8klot2" path="res://Assets/Music/forest-soundtrack.mp3" id="9_blfu1"]
 [ext_resource type="Texture2D" uid="uid://dktar0diqh3of" path="res://Assets/Sprites/Objects/free-swamp-game-tileset-pixel-art/2 Background/Layers/3.png" id="9_la5o5"]
-[ext_resource type="PackedScene" uid="uid://b51ab2bo0m35d" path="res://Objects/moving_platform.tscn" id="10_lf2a2"]
+[ext_resource type="PackedScene" uid="uid://b51ab2bo0m35d" path="res://moving_platform.tscn" id="10_lf2a2"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_5yigk")
@@ -104,7 +104,6 @@ stream = ExtResource("9_blfu1")
 volume_db = -10.0
 
 [node name="MovingPlatform" parent="." instance=ExtResource("10_lf2a2")]
-position = Vector2(11, 19)
-metadata/IsHorizontal = true
-metadata/PlatformDistance = 30
+position = Vector2(0, 18)
+metadata/PlatformDistance = 100
 metadata/PlatformSpeed = 0.2

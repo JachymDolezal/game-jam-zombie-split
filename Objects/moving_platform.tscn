@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b51ab2bo0m35d"]
+
+[ext_resource type="Script" path="res://Objects/moving_platform.gd" id="1_fiey0"]
+[ext_resource type="Texture2D" uid="uid://cttupi5e8uqme" path="res://Objects/moving_platform_concept.png" id="2_ow5wu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2umi7"]
+size = Vector2(50, 10)
+
+[node name="MovingPlatform" type="CharacterBody2D"]
+script = ExtResource("1_fiey0")
+metadata/IsHorizontal = false
+metadata/PlatformDistance = 0
+metadata/PlatformSpeed = 0.4
+metadata/WaitTime = 0.5
+metadata/IsForward = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ow5wu")
+
+[node name="WaitTimer" type="Timer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2umi7")
+
+[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]

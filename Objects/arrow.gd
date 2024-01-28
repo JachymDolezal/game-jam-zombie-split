@@ -1,7 +1,7 @@
 extends Node2D
 
 var dir : Vector2 = Vector2(0,0)
-var velocity = 80
+var velocity = 90
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

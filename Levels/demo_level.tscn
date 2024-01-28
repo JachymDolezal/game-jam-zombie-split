@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bv6jipwseptpn"]
 
 [ext_resource type="PackedScene" uid="uid://7qg7mmydcue2" path="res://Player/zombie.tscn" id="1_7nm1a"]
-[ext_resource type="PackedScene" uid="uid://bwx3co2a2tnix" path="res://Player/demolevel.tscn" id="2_4htfp"]
+[ext_resource type="PackedScene" uid="uid://bwx3co2a2tnix" path="res://Levels/demolevel.tscn" id="2_4htfp"]
 
 [node name="Demo level" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-253.0]

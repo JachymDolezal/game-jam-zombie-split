@@ -4,6 +4,8 @@ extends CharacterBody2D
 const SPEED = Game.Legs_speed
 const JUMP_VELOCITY = Game.Legs_jump_speed
 var can_transform_back = false
+var push_force = 80
+var force = 20
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -46,6 +48,14 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+	var bodies = get_slide_collision_count()
+	for i in range(bodies):
+		var collision = get_slide_collision(i)
+		if collision.get_collider() is RigidBody2D:
+			if collision.get_collider().min_force:
+				print("min force",collision.get_collider().min_force)
+				if force >= int(collision.get_collider().min_force):
+					collision.get_collider().apply_impulse(-collision.get_normal() * push_force)
 
 func _on_area_2d_body_entered(body):
 	if body.name == 'Torso':
@@ -62,9 +72,10 @@ func transform_to_normal():
 	
 	# instanciate normal body
 	var normal_body = preload("res://Player/zombie.tscn").instantiate()
+	normal_body.position = self.position
 	get_parent().add_child(normal_body)
 	# set position
-	normal_body.position = self.position
+	
 	torso.queue_free()
 	# remove self
 	self.queue_free()
@@ -90,6 +101,7 @@ func update_animation_parametrs():
 		animation_tree["parameters/conditions/Press Run"] = false
 
 func death():
+	print("legs die")
 	# reload scene
 	Game.player_dies = false
 	get_tree().reload_current_scene()

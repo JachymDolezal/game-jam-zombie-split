@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://byjddnwkptsy3"]
+
+[ext_resource type="Script" path="res://Levels/level_1.gd" id="1_mvpr3"]
+[ext_resource type="PackedScene" uid="uid://7qg7mmydcue2" path="res://Player/zombie.tscn" id="2_k73r1"]
+[ext_resource type="PackedScene" uid="uid://buxo67obl75yb" path="res://Levels/level_1_map.tscn" id="3_8c0g3"]
+[ext_resource type="PackedScene" uid="uid://ba15ah2n0w3ku" path="res://Objects/gas.tscn" id="4_38t2f"]
+[ext_resource type="PackedScene" uid="uid://dye3ci15eml5d" path="res://Objects/meat.tscn" id="5_wytr6"]
+[ext_resource type="Texture2D" uid="uid://b40q1gl0388ve" path="res://Assets/Sprites/Objects/free-swamp-game-tileset-pixel-art/2 Background/Layers/1.png" id="6_08o2r"]
+[ext_resource type="Texture2D" uid="uid://dktar0diqh3of" path="res://Assets/Sprites/Objects/free-swamp-game-tileset-pixel-art/2 Background/Layers/3.png" id="7_g40fj"]
+[ext_resource type="AudioStream" uid="uid://bds3k5h8klot2" path="res://Assets/Music/forest-soundtrack.mp3" id="8_40m6p"]
+[ext_resource type="PackedScene" uid="uid://b51ab2bo0m35d" path="res://Objects/moving_platform.tscn" id="9_j5ywp"]
+
+[node name="demo_level" type="Node2D"]
+script = ExtResource("1_mvpr3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Zombie" parent="." instance=ExtResource("2_k73r1")]
+position = Vector2(-121, 18)
+
+[node name="Level1Map" parent="." instance=ExtResource("3_8c0g3")]
+
+[node name="Gas" parent="." instance=ExtResource("4_38t2f")]
+position = Vector2(-168, -72)
+
+[node name="Meat" parent="." instance=ExtResource("5_wytr6")]
+position = Vector2(-121, -36)
+
+[node name="Meat2" parent="." instance=ExtResource("5_wytr6")]
+position = Vector2(-121, -96)
+
+[node name="Meat3" parent="." instance=ExtResource("5_wytr6")]
+position = Vector2(266, -104)
+
+[node name="1" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(2, -4)
+texture = ExtResource("6_08o2r")
+
+[node name="3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.807843)
+z_index = -1
+position = Vector2(4, -1)
+texture = ExtResource("7_g40fj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_40m6p")
+volume_db = -10.0
+
+[node name="MovingPlatform" parent="." instance=ExtResource("9_j5ywp")]
+position = Vector2(47, 2)
+metadata/IsHorizontal = true
+metadata/PlatformDistance = 10
+metadata/PlatformSpeed = 10

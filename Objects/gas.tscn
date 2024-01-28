@@ -31,8 +31,7 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_jkhgl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.662745)
-self_modulate = Color(0, 1, 0.0509804, 0.65098)
+modulate = Color(0.788235, 0.972549, 0, 0.329412)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_eild0")
 animation = &"Idle"

@@ -27,3 +27,4 @@ func _physics_process(delta):
 func _on_area_2d_body_entered(body):
 	if body.name == "Legs" or body.name == "Zombie" or body.name == "Torso":
 		Game.player_dies = true
+

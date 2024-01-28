@@ -8,6 +8,8 @@ const JUMP_VELOCITY = Game.Zombie_jump_speed
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animation_tree = $AnimationTree
 @onready var sounds = $AudioStreamPlayer2D
+var push_force = 80
+var force = 80
 
 func _ready():
 	animation_tree.active = true
@@ -18,6 +20,7 @@ func _process(delta):
 func _physics_process(delta):
 
 	if Game.player_dies:
+		print(Game.player_dies)
 		Game.player_dies = false
 		die()
 
@@ -51,6 +54,15 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
+	# find if colliding with rigidbody
+	var bodies = get_slide_collision_count()
+	for i in range(bodies):
+		var collision = get_slide_collision(i)
+		if collision.get_collider() is RigidBody2D:
+			if collision.get_collider().min_force:
+				if force >= int(collision.get_collider().min_force):
+					collision.get_collider().apply_impulse(-collision.get_normal() * push_force)
+
 func update_animation_parametrs():
 	if(velocity == Vector2.ZERO):
 		animation_tree["parameters/conditions/idle"] = true
@@ -79,16 +91,21 @@ func transform():
 	var legs = load("res://Player/legs.tscn").instantiate()
 	var torso = load("res://Player/torso.tscn").instantiate()
 	# add it as children of root node
-	get_parent().add_child(legs)
-	get_parent().add_child(torso)
+	
 	# set the position of the new nodes set it as the current node but legs few pixels up and torso 20 pixels abe legs
+	torso.add_collision_exception_with(legs)
+	legs.add_collision_exception_with(torso)
 	legs.position = position
 	torso.position = position + Vector2(0, -20)
 	torso.velocity.x = (self.velocity.x) * 1.3
 	torso.velocity.y = (self.velocity.y) * 1.3
-	torso.add_collision_exception_with(legs)
-	legs.add_collision_exception_with(torso)
+	legs.velocity.x = (self.velocity.x) * 0.7
+	legs.velocity.y = (self.velocity.y) * 0.7
+	get_parent().add_child(legs)
+	get_parent().add_child(torso)
+
 
 func die():
+	print("zombie dies")
 	# go back to the main menu
 	get_tree().change_scene_to_file(Game.current_level)
