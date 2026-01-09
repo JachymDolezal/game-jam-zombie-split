@@ -28,7 +28,6 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-
 	# Handle Jump.
 	if Input.is_action_just_pressed("Up") and is_on_floor():
 		sounds.play()

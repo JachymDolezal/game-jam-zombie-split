@@ -14,8 +14,7 @@ func _ready():
 	duration_cooldown = self.get_meta("Cooldown")
 	cooldown.wait_time = duration_cooldown
 	cooldown.one_shot = false
-	cooldown.start()
-	
+	cooldown.start()	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
